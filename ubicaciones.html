@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+
+    <style>
+/* Estilos generales */
+    body {
+        position: relative;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f8f9fa;
+        color: #333;
+        box-sizing: border-box; 
+    }
+
+    header {
+        background: url('aaaaaaaaaaaa\ -\ copia.png') no-repeat center center/cover;
+        color: white;
+        padding: 4rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 65vh;
+        border-bottom: none; /* Eliminamos cualquier línea bajo el encabezado */
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    header p {
+        margin: 0.5rem 0 0;
+    }
+
+/* Menú desplegable */
+    .menu-container {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+    }
+
+    .menu-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-button span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    .menu-panel {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+    }
+
+    .menu-panel.active {
+        right: 0;
+    }
+
+    .menu-panel a {
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        margin: 1rem 0;
+        transition: color 0.3s;
+    }
+
+    .menu-panel a:hover {
+        color: #4b8a4e; 
+    }    
+
+/* Sección de ubicaciones */
+    .ubicaciones {
+        margin: 2rem auto;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .ubicaciones h2 {
+        color: #507263; 
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .ubicacion {
+        margin-bottom: 2rem;
+    }
+
+    .ubicacion iframe {
+        width: 100%; 
+        max-width: 600px; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    }
+
+    .ubicacion h3 {
+        margin: 1rem 0 0.5rem;
+        color: #333;
+        font-size: 1.5rem;
+    }
+
+    .ubicacion p {
+        margin: 0;
+        color: #666;
+        font-size: 1rem;
+    }
+
+    .ubicacion hr {
+        margin: 2rem auto;
+        border: none;
+        border-top: 2px solid #ccc;
+        width: 80%;
+    }
+
+/* Pie de página */
+    footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.2rem;
+        background: #333;
+        color: white;
+    }
+
+    footer img {
+        width: 75px;
+        margin-top: 1rem;
+    }
+
+/* Media Queries */
+    @media (max-width: 768px) {
+        header {
+            padding: 2rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        .ubicacion iframe {
+            width: 100%; 
+        }
+
+        footer {
+            font-size: 1rem;
+            padding: 1rem;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="menu-container">
+            <button class="menu-button" id="menuButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu-panel" id="menuPanel">
+                <a href="index.html">Inicio</a>
+                <a href="bienvenidos.html">Bienvenidos</a>
+                <a href="cuestionario.html">Cuestionario</a>
+                <a href="contacto.html">Contactanos</a>
+                <a href="ubicaciones.html">Ubicaciones</a>
+                <a href="información.html">Más Información</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Ubicaciones -->
+    <div class="ubicaciones">
+        <h2>UBICACIONES</h2>
+
+        <div class="ubicacion">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1961.8907559748925!2d-3.840472!3d40.1915757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f30066b13895%3A0x3d560604b78e7376!2sIglesia+de+San+Andr%C3%A9s+Ap%C3%B3stol!5e0!3m2!1ses!2ses!4v1695007123456!5m2!1ses!2ses&t=k"
+                height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h3>Iglesia de San Andrés Apóstol</h3>
+            <p>Cubas de la Sagra, Madrid.</p>
+            <hr>
+        </div>
+
+        <div class="ubicacion">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31652.14864314717!2d-4.0984683!3d40.6557093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd410c9083866791%3A0x73d45adc37c29a00!2sFinca+Prados+Moros!5e0!3m2!1ses!2ses!4v1695007189123!5m2!1ses!2ses&t=k"
+                height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h3>Finca Prados Moros</h3>
+            <p>Guadarrama, Madrid.</p>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; BODA ADRIAN Y CARLA 2025.</p>
+        <img src="logoAC.png">
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+// Menú desplegable
+        const menuButton = document.getElementById('menuButton');
+        const menuPanel = document.getElementById('menuPanel');
+
+        menuButton.addEventListener('click', () => {
+            menuPanel.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !menuPanel.contains(event.target)) {
+                menuPanel.classList.remove('active');
+            }
+        });
+
+        // Cerrar el menú al hacer clic en un enlace
+        const menuLinks = menuPanel.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuPanel.classList.remove('active');
+            });
+        }); 
+    </script>
+</body>
+</html>
